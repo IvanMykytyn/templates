@@ -1,36 +1,56 @@
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 // colors
-$dark-blue: hsl(209, 23%, 22%); // Dark Mode Elements
-$darker-blue: hsl(207, 26%, 17%); // Dark Mode Background
-$the-darkest-blue: hsl(200, 15%, 8%); // Light Mode Text
+$white: #ffffff;
+$dark: #000000;
 
-$dark-gray: hsl(0, 0%, 52%); // Light Mode Input
-$light-gray: hsl(0, 0%, 98%); // Light Mode Background
-$white: hsl(0, 0%, 100%); // Dark Mode Text & Light Mode Elements
-
-$lighter-gray: hsl(0, 0%, 87%);
+// rest of the vars
+$backgroundColor: $white;
+$textColor: $dark;
+$letterSpacing: 1px;
 
 // fonts
-$main-font: 'Nunito Sans', sans-serif;
+$main-font: 'Open Sans', sans-serif;
+$small-text: 0.875rem;
+$extra-small-text: 0.7em;
 
 // border
-$border-radius: 5px;
+$border-radius: 0.25rem;
+$input-radius: 1.5rem;
 
 // animations
 $transition: 0.3s ease-in-out all;
 
-// card size
-$cardWidth: 285px;
+// constant sizes
 
-// media query
-$mobileWidth: 600px;
-$tabletWidth: 900px;
+// media queries
+// @media screen and (min-width: $) {}
+
+// min-width
+$large-screen: 1200px;
+$laptop-screen: 992px;
+$medium-screen: 768px;
+$tablet-screen: 600px;
+
+//max-width
+$phone-screen: 600px;
+$extra-small-screen: 360px;
 
 // shadows
-$shadow-1: 1px 2px 8px -2px rgba(0, 0, 0, 0.15);
-$shadow-2: 0 2px 10px -3px rgba(0, 0, 0, 0.2);
-$shadow-3: 0 0 12px -4px rgba(0, 0, 0, 0.25);
+$shadow-1: 0 1px 3px 0 #0000001a, 0 1px 2px 0 #0000000f;
+$shadow-2: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+$shadow-3: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
+$shadow-4: 0 20px 25px -5px #0000001a, 0 10px 10px -5px #0000000a;
 
-// shadows
-$shadow-1-dark: 1px 2px 15px -10px rgba(0, 0, 0, 0.75);
-$shadow-2-dark: 0 1px 16px -6px rgba(0, 0, 0, 0.8);
-$shadow-3-dark: 0 0 25px -8px rgba(0, 0, 0, 0.85);
+@mixin centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin alignVertically {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
